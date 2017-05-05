@@ -18,6 +18,7 @@
     "js-priority-queue": "^0.1.5",
     "mongoose": "^4.9.7",
     "morgan": "~1.0.0",
+    "node-schedule": "^1.2.1",
     "requests": "^0.1.7",
     "static-favicon": "~1.0.0"
   }

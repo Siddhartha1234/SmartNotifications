@@ -6,7 +6,7 @@ var mongoose = require('mongoose');
 
 var mongoose_schema = mongoose.Schema;
 
-var clientScheme = new Schema({
+var clientScheme = new mongoose_schema({
     Name : String,
     sentLastDay : {type : Number, default : 0},
     limitLastDay : {type : Number, default : 20},
@@ -24,8 +24,8 @@ var clientScheme = new Schema({
         'destinationURL' : String
     }],
     notificationType : {type: String, default: 'push'},
-    destinationURL   : {type: String, default: "https://cutshort.io/"}
-
+    destinationURL   : {type: String, default: "https://cutshort.io/"},
+    iter : {type: Number , default : 0}
 });
 
 var Client = mongoose.model('User', clientScheme);

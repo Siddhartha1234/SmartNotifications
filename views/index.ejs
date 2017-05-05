@@ -26,7 +26,7 @@
         <md-tabs flex md-selected="selectedIndex" layout="column" layout-fill md-border-bottom="" md-autoselect="">
             <md-tab ng-repeat="user in users" layout="column" layout-fill label="{{user.name}}">
                 <md-content class="md-padding">
-                    <div layout = "row" ng-repeat="notification in user.notifications track by (notification.id + $index)" flex>
+                    <div layout = "row" ng-repeat="notification in user.notifications track by  $index" flex>
                         <md-card flex = "100">
                              <div layout="row">
                                  <img src="http://placehold.it/75x75" style="width: 75px; height: 75px; padding: 5px" class="md-card-image">
