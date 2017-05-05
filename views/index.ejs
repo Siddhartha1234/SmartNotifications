@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="/node_modules/angular-material/angular-material.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="/node_modules/angular/angular.js"></script>
+    <script src="/node_modules/angular-aria/angular-aria.js"></script>
+    <script src="/node_modules/angular-animate/angular-animate.js"></script>
+    <script src="/node_modules/angular-material/angular-material.js"></script>
+    <script src="/javascripts/Notifications.js"></script>
+</head>
+
+<body ng-app="SmartNotifications" ng-controller="NotificationsController">
+    <div layout="row" flex>
+        <md-toolbar class="md-hue-2">
+            <div class="md-toolbar-tools">
+                <h2 flex="" md-truncate="">Notifications</h2>
+                <i class="material-icons md-48">account_circle</i>
+                <md-button class="material-icons md-48">arrow_drop_down</md-button>
+            </div>
+        </md-toolbar>
+    </div>
+
+    <md-content class="md-padding" layout="column" layout-fill>
+        <md-tabs flex md-selected="selectedIndex" layout="column" layout-fill md-border-bottom="" md-autoselect="">
+            <md-tab ng-repeat="user in users" layout="column" layout-fill label="{{user.name}}">
+                <md-content class="md-padding">
+                    <div layout = "row" ng-repeat="notification in user.notifications track by (notification.id + $index)" flex>
+                        <md-card flex = "100">
+                             <div layout="row">
+                                 <img src="http://placehold.it/75x75" style="width: 75px; height: 75px; padding: 5px" class="md-card-image">
+                                 <md-card-content>
+                                     <span> {{ notification.message}}</span>
+                                 </md-card-content>
+                            </div>
+                            <div layout = "row" layout-align = "end center">
+                                <md-button class="material-icons md-48">done</md-button>
+                                <md-button class="material-icons md-48">bookmark</md-button>
+                            </div>
+                        </md-card>
+                    </div>
+                </md-content>
+            </md-tab>
+        </md-tabs>
+    </md-content>
+</body>
+
+</html>
