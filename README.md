@@ -21,6 +21,8 @@ Wait for some minutes and you can see notifications being dispatched to the test
 
 2.Files : 
    ```
+   Scheduler                : /core_modules/scheduler.js
+   Dispatcher               : /core_modules/dispatcher.js
    Server route             : /routes/index.js
    Frontend view            : /views/index.ejs
    Frontend angular         : /public/javascript/Notifications.js
